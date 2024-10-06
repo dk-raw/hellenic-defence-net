@@ -36,16 +36,13 @@
                 <NuxtLink to="/category/πυροβολικο" class="dropdown-item">ΠΥΡΟΒΟΛΙΚΟ</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/category/τεθωρακισμενα" class="dropdown-item">ΟΧΗΜΑΤΑ</NuxtLink>
-              </li>
-              <li>
                 <NuxtLink to="/category/αεραμυνα" class="dropdown-item">ΑΕΡΑΜΥΝΑ</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="/category/uav" class="dropdown-item">UAV</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/category/ηλεκτρονικος πολεμος" class="dropdown-item">ΗΛΕΚΤΡΟΝΙΚΟΣ ΠΟΛΕΜΟΣ</NuxtLink>
+                <NuxtLink to="/category/ew" class="dropdown-item">ΗΛΕΚΤΡΟΝΙΚΟΣ ΠΟΛΕΜΟΣ</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="/category/c4isr" class="dropdown-item">C4ISR</NuxtLink>
@@ -70,18 +67,14 @@
                 <h6 class="dropdown-header">ΕΥΡΩΠΗ</h6>
               </li>
               <li>
-                <NuxtLink to="/category/ουκρανια" class="dropdown-item">ΟΥΚΡΑΝΙΑ</NuxtLink>
-              </li>
-              <!-- <li>
-                <NuxtLink to="/category/βουλγαρια" class="dropdown-item"
-                  >ΒΟΥΛΓΑΡΙΑ</NuxtLink
-                >
+                <NuxtLink to="/category/ελλαδα" class="dropdown-item">ΕΛΛΑΔΑ</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/category/ρουμανια" class="dropdown-item"
-                  >ΡΟΥΜΑΝΙΑ</NuxtLink
-                >
-              </li> -->
+                <NuxtLink to="/category/ουκρανια" class="dropdown-item">ΟΥΚΡΑΝΙΑ</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/category/ρωσια" class="dropdown-item">ΡΩΣΙΑ</NuxtLink>
+              </li>
               <li>
                 <h6 class="dropdown-header">ΑΣΙΑ</h6>
               </li>
@@ -91,11 +84,6 @@
               <li>
                 <NuxtLink to="/category/ιραν" class="dropdown-item">ΙΡΑΝ</NuxtLink>
               </li>
-              <!-- <li>
-                <NuxtLink to="/category/αρμενια" class="dropdown-item"
-                  >ΑΡΜΕΝΙΑ</NuxtLink
-                >
-              </li> -->
               <li>
                 <NuxtLink to="/category/κινα" class="dropdown-item">ΚΙΝΑ</NuxtLink>
               </li>
@@ -103,7 +91,7 @@
                 <NuxtLink to="/category/κορεα" class="dropdown-item">ΚΟΡΕΑ</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/category/ιαπωνια" class="dropdown-item">ΙΑΠΩΝΙΑ</NuxtLink>
+                <NuxtLink to="/category/μεση ανατολη" class="dropdown-item">ΜΕΣΗ ΑΝΑΤΟΛΗ</NuxtLink>
               </li>
               <!-- <li><h6 class="dropdown-header">ΑΜΕΡΙΚΗ</h6></li>
               <li>

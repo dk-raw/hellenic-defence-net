@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="display-3 fw-bold mb-0">{{ cat.toUpperCase() }}</h1>
+    <h1 class="display-3 fw-bold mb-0">{{ route.params.cat.toUpperCase() }}</h1>
     <hr />
     <div>
       <div
@@ -16,12 +16,12 @@
           mb-4
         "
       >
-        <div class="col" v-for="post in filtered" :key="post.id">
+        <div class="col" v-for="post in posts" :key="post.slug">
           <Card
             :title="post.title"
             :description="post.description"
-            :image="post.cover_image"
-            :slug="post.id"
+            :image="post.image.url"
+            :slug="post.slug"
           />
         </div>
       </div>
@@ -30,27 +30,28 @@
 </template>
   
 <script setup>
+import { GraphQLClient } from 'graphql-request'
 const route = useRoute();
-const { getItems } = useDirectusItems();
+const config = useRuntimeConfig()
+const client = new GraphQLClient(`https://graphql.contentful.com/content/v1/spaces/${config.public.spaceId}?access_token=${config.public.apiKey}`)
 
-const categories = ["ναυτικο", "αεροπορια", "βιομηχανια", "πεζικο"];
+const category = ref(route.params.cat)
 
-const cat = ref(route.params.cat);
-
-const posts = await getItems({
-  collection: "Articles",
-  params: {
-    filter: {
-      visible: {
-        _eq: true,
-      },
-    },
-    sort: "-created_at",
-  },
-});
-
-const filtered = posts.filter((post) => {
-  return post.tags.includes(route.params.cat);
-});
+const query = `
+  {
+  articleCollection(where: {tags_contains_some: "${category.value}"},limit: 100) {
+    items {
+      title
+      description
+      slug
+      image {
+        url
+      }
+    }
+  }
+}
+`
+const data = await client.request(query)
+const posts = data.articleCollection.items
 </script>
   

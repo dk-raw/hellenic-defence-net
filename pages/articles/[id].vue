@@ -54,7 +54,7 @@ const query = `
         url
       }
       sys {
-        publishedAt
+        firstPublishedAt
       }
       content {
         json
