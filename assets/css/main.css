@@ -287,12 +287,49 @@ h5,
 }
 
 .header {
-    background-image: url('@/assets/images/header-7.jpg');
+    background-image: url('@/assets/images/header-3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 94vh;
     border-bottom: 1px solid hsl(0, 0%, 25%) !important
+}
+
+footer {
+    border-top: 1px solid hsl(0, 0%, 25%) !important;
+    border-bottom: 2px solid hsl(30, 100%, 50%);
+}
+
+.navbar {
+    border-top: 2px solid hsl(30, 100%, 50%);
+}
+
+input,
+.input-group * {
+    border-color: hsl(0, 0%, 25%) !important;
+}
+
+.search-result {
+    padding: 1.5em;
+    border: 1px solid hsl(0, 0%, 29%);
+}
+
+.search-result:hover h4,
+.search-result:focus h4,
+.search-result:hover .link,
+.search-result:focus .link {
+    text-decoration: underline !important;
+}
+
+.btn-telegram {
+    color: hsl(204, 78%, 50%);
+    border-color: hsl(204, 78%, 50%);
+}
+
+.btn-telegram:hover,
+.btn-telegram:focus {
+    background-color: hsl(204, 78%, 50%);
+    color: black;
 }
 
 .form-control {

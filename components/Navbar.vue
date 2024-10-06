@@ -132,17 +132,6 @@
   </nav>
 </template>
 
-<style scoped>
-.navbar {
-  border-top: 2px solid hsl(30, 100%, 50%);
-}
-
-input,
-.input-group * {
-  border-color: hsl(0, 0%, 25%) !important;
-}
-</style>
-
 <script>
 export default {
   name: "Navbar",

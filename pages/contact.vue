@@ -59,10 +59,5 @@
   </div>
 </template>
 
-<style scoped>
-.col-md {
-  padding: 1em;
-}
-</style>
 <script setup>
 </script>

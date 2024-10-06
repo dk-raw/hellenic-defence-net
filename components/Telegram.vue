@@ -13,29 +13,11 @@
     <p class="lead text-muted">
       Όπου ποστάρουμε όλα τα καινούργια άρθρα ώστε να μην χάνετε κανένα
     </p>
-    <a
-      href="https://t.me/hellenicdefence"
-      target="_blank"
-      class="btn btn-telegram btn-lg w-100"
-      >@hellenicdefence</a
-    >
+    <a href="https://t.me/hellenicdefence" target="_blank" class="btn btn-telegram btn-lg w-100">@hellenicdefence</a>
   </div>
 </template>
 
-<style>
-.btn-telegram {
-  color: hsl(204, 78%, 50%);
-  border-color: hsl(204, 78%, 50%);
-}
-
-.btn-telegram:hover,
-.btn-telegram:focus {
-  background-color: hsl(204, 78%, 50%);
-  color: black;
-}
-</style>
-  
-  <script>
+<script>
 export default {
   name: "Newsletter",
   props: {
@@ -48,4 +30,3 @@ export default {
   },
 };
 </script>
-  

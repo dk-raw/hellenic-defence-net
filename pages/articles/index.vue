@@ -104,13 +104,13 @@
   </div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 h2 {
   padding-left: 0.5em;
   margin-bottom: 0.5em;
   font-weight: 600;
 }
-</style>
+</style> -->
 
 <script setup>
 const { getItems } = useDirectusItems();

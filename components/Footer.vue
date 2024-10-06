@@ -11,13 +11,6 @@
   </footer>
 </template>
 
-<style>
-footer {
-  border-top: 1px solid hsl(0, 0%, 25%) !important;
-  border-bottom: 2px solid hsl(30, 100%, 50%);
-}
-</style>
-
 <script>
 export default {
   name: "Footer",
