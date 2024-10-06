@@ -5,6 +5,10 @@
     </h1>
     <hr />
     <div>
+      <p class="lead text-muted fw-normal">
+        Ακολουθήστε τον συντάκτη στο <a :href="`https://x.com/${username}`" target="_blank" class="link"><i
+            class="fa-brands fa-x-twitter"></i> Twitter</a>
+      </p>
       <p class="lead text-muted fw-normal" v-if="posts.length == 0">
         Δεν βρέθηκαν άρθρα.
       </p>
@@ -31,14 +35,14 @@
       <br />
       <ul class="pagination justify-content-center">
         <li class="page-item" v-if="parseInt(route.params.page) > 1">
-          <NuxtLink :to="`/author/${route.params.username}/${parseInt(route.params.page) - 1
+          <NuxtLink :to="`/authors/${route.params.username}/${parseInt(route.params.page) - 1
             }`" class="page-link">&laquo; Προηγούμενη</NuxtLink>
         </li>
         <li class="page-item">
           <a class="page-link" href="#">{{ route.params.page }}</a>
         </li>
         <li class="page-item" v-if="posts.length == 10">
-          <NuxtLink :to="`/author/${username.value}/${parseInt(route.params.page) + 1
+          <NuxtLink :to="`/authors/${username.value}/${parseInt(route.params.page) + 1
             }`" class="page-link">Επόμενη &raquo;</NuxtLink>
         </li>
       </ul>
@@ -73,7 +77,7 @@ const query = `
     }
   }
 }
- authorCollection(where: {twitter: "@123"}) {
+ authorCollection(where: {twitter: "${username.value}"}) {
   items{
   displayName
 }

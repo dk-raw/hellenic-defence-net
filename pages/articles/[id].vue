@@ -3,7 +3,7 @@
     <article>
       <h1 class="display-3 fw-bold mb-1">{{ post.title }}</h1>
       <p class="lead fw-normal text-muted">
-        <span v-if="post.author.displayName">Γράφει ο <NuxtLink :to="`/author/${post.author.twitter}`" class="link">{{
+        <span v-if="post.author.displayName">Γράφει ο <NuxtLink :to="`/authors/${post.author.twitter}`" class="link">{{
           post.author.displayName }}</NuxtLink> -
         </span>
         {{ date.getDate() }} {{ months[date.getMonth()] }}
@@ -20,7 +20,7 @@
       <hr />
       <div class="d-flex flex-row justify-content-between align-items-center">
         <p class="m-0 author-name" v-if="post.author.displayName">
-          από τον <NuxtLink :to="`/author/${post.author.twitter}`" class="link">{{
+          από τον <NuxtLink :to="`/authors/${post.author.twitter}`" class="link">{{
             post.author.displayName }}</NuxtLink>
         </p>
         <p class="m-0" v-else>Hellenic Defence Net</p>
