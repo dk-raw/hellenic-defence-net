@@ -88,7 +88,7 @@ const months = [
   "Δεκεμβρίου",
 ];
 
-const date = ref(new Date(post.sys.publishedAt));
+const date = ref(new Date(post.sys.firstPublishedAt));
 
 useHead({
   title: `${post.title} - Hellenic Defence Net`,
