@@ -31,7 +31,6 @@ import Article from "~~/components/Article.vue";
 
 const route = useRoute();
 import { GraphQLClient } from 'graphql-request'
-import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 const content = ref("");
@@ -42,7 +41,7 @@ const client = new GraphQLClient(`https://graphql.contentful.com/content/v1/spac
 
 const query = `
   {
-  articleCollection(where: {slug: "${route.params.id}"}) {
+  articleCollection(where: {slug: "${route.params.id}"}, limit: 1) {
     items {
       title
       description
@@ -55,7 +54,16 @@ const query = `
       }
       content {
         json
-
+        links {
+          assets {
+            block {
+              url
+              sys {
+                id
+              }
+            }
+          }
+        }
       }
       author {
         displayName
@@ -75,7 +83,23 @@ if (!post || Object.keys(post).length === 0) {
   })
 }
 
-content.value = documentToHtmlString(post.content.json, {})
+const assets = post.content.links.assets.block
+
+const idToUrlMap = assets.reduce((map, item) => {
+  map[item.sys.id] = item.url;
+  return map;
+}, {});
+
+const options = {
+  renderNode: {
+    'embedded-asset-block': (node) => {
+      const { id } = node.data.target.sys
+      return `<img src="${idToUrlMap[id]}" class="img-fluid" />`
+    },
+  },
+}
+
+content.value = documentToHtmlString(post.content.json, options)
 
 const months = [
   "Ιανουαρίου",
