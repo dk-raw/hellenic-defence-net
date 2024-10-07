@@ -5,7 +5,7 @@
     </h1>
     <hr />
     <div>
-      <p class="lead text-muted fw-normal">
+      <p class="lead text-muted fw-normal" v-if="hasTwitter">
         Ακολουθήστε τον συντάκτη στο <a :href="`https://x.com/${username}`" target="_blank" class="link"><i
             class="fa-brands fa-x-twitter"></i> Twitter</a>
       </p>
@@ -68,6 +68,7 @@ const query = `
   authorCollection(where: {twitter: "${username.value}"}) {
     items {
       displayName
+      hastwitter
     }
   }
 }
@@ -76,5 +77,11 @@ const data = await client.request(query)
 
 const posts = data.articleCollection.items
 const total = data.articleCollection.total
+if (!posts || Object.keys(posts).length === 0) {
+  throw createError({
+    statusCode: 404
+  })
+}
+const hasTwitter = data.authorCollection.items[0].hastwitter
 const name = data.authorCollection.items[0].displayName
 </script>

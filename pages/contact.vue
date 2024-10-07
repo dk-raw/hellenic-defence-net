@@ -11,7 +11,7 @@
         <i class="text-muted">Για ευνόητους λόγους αποκρύπτουμε την πλήρη διεύθυνση. Αντικαταστήστε
           το <b>[at]</b> με <b>@</b> και το <b>[dot]</b> με <b>.</b> (τελεία)</i>
       </div>
-      <div class="col-md">
+      <div class="col-md text-center">
         <p class="lead fs-4 fw-normal mb-1">
           <i class="fa-solid fa-location-dot"></i> Αθήνα, Ελλάδα
         </p>
@@ -28,11 +28,6 @@
         <a href="https://t.me/hellenicdefence" target="_blank"
           class="btn btn-outline-primary w-100">@hellenicdefence</a>
       </div>
-      <div class="col-sm text-center mb-4">
-        <h4 class="fw-600"><i class="fa-brands fa-linkedin"></i> LinkedIn</h4>
-        <a href="https://www.linkedin.com/company/hellenic-defence-net" target="_blank"
-          class="btn btn-outline-primary w-100">@hellenicdefence</a>
-      </div>
     </div>
     <h2 class="display-6 fw-500">Για την δημοσίευση άρθρων...</h2>
     <ul>
@@ -45,19 +40,25 @@
         μέσω
         <a href="https://wetransfer.com" target="_blank" class="link">WeTransfer</a>
       </li>
-      <li>Ως όνομα συντάκτη αναγράψτε το πλήρες όνομά σας</li>
-      <li>Μπορείτε να δημοσιεύσετε ανώνυμα αν αυτό επιθυμείτε</li>
+      <li>Αναγράψτε το όνομά σας και το username σας στο twitter (X)</li>
+      <li>Μπορείτε να δημοσιεύσετε ανώνυμα</li>
       <li>
         Μπορείτε να παρουσιάσετε συνοπτικά τον εαυτό σας (σπουδές, επάγγελμα,
-        εμπειρία κ.ο.κ.)
+        εμπειρία)
       </li>
       <li>Μπορείτε να παραπέμψετε σε δική σας ή τρίτη ιστοσελίδα</li>
       <li><strong>Δεν</strong> μπορείτε να τοποθετηθείτε πολιτικά</li>
       <li><strong>Δεν</strong> υπάρχει όριο λέξεων</li>
-      <li>Για τυχόν διορθώσεις, επικοινωνήστε μαζί μας</li>
+      <li>Για τυχόν διορθώσεις ή αλλαγές, επικοινωνήστε μαζί μας</li>
     </ul>
   </div>
 </template>
+
+<style scoped>
+.col-md {
+  padding: 1em;
+}
+</style>
 
 <script setup>
 </script>

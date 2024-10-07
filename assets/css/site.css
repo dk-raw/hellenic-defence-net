@@ -11706,7 +11706,8 @@ h5,
 }
 
 .navbar-brand,
-.index-title {
+.index-title,
+.ff-stratum {
     font-family: 'Stratum', 'IBM Plex Sans', sans-serif;
 }
 

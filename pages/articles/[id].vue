@@ -3,7 +3,7 @@
     <article>
       <h1 class="display-3 fw-bold mb-1">{{ post.title }}</h1>
       <p class="lead fw-normal text-muted">
-        <span v-if="post.author.displayName">Γράφει ο <NuxtLink :to="`/authors/${post.author.twitter}`" class="link">{{
+        <span v-if="post.author">Γράφει ο <NuxtLink :to="`/authors/${post.author.twitter}`" class="link">{{
           post.author.displayName }}</NuxtLink> -
         </span>
         {{ date.getDate() }} {{ months[date.getMonth()] }}
@@ -19,11 +19,7 @@
       <p style="font-size: 18px">Αναμένουμε τα σχόλιά σας στο Twitter!</p>
       <hr />
       <div class="d-flex flex-row justify-content-between align-items-center">
-        <p class="m-0 author-name" v-if="post.author.displayName">
-          από τον <NuxtLink :to="`/authors/${post.author.twitter}`" class="link">{{
-            post.author.displayName }}</NuxtLink>
-        </p>
-        <p class="m-0" v-else>Hellenic Defence Net</p>
+        <p class="m-0 ff-stratum fw-bold">HDN</p>
         <Sharer :title="post.title" :slug="post.slug" />
       </div>
     </article>
@@ -35,6 +31,7 @@ import Article from "~~/components/Article.vue";
 
 const route = useRoute();
 import { GraphQLClient } from 'graphql-request'
+import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 const content = ref("");
@@ -58,6 +55,7 @@ const query = `
       }
       content {
         json
+
       }
       author {
         displayName
@@ -70,6 +68,12 @@ const query = `
 const data = await client.request(query)
 
 const post = data.articleCollection.items[0]
+
+if (!post || Object.keys(post).length === 0) {
+  throw createError({
+    statusCode: 404
+  })
+}
 
 content.value = documentToHtmlString(post.content.json, {})
 
@@ -105,7 +109,7 @@ useHead({
     },
     {
       name: "author",
-      content: post.author.displayName ? post.author.displayName : "Hellenic Defence Net",
+      content: post.author ? post.author.displayName : "Hellenic Defence Net",
     },
     {
       property: "og:url",
