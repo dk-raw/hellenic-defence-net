@@ -123,7 +123,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: `https://hellenicdefence.net/articles/${post.id}`,
+      href: `https://hellenicdefence.net/articles/${post.slug}`,
     },
   ],
   meta: [
