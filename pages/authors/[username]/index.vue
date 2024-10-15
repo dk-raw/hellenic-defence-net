@@ -36,7 +36,7 @@
           <a class="page-link" href="#">1</a>
         </li>
         <li class="page-item" v-if="posts.length == 10">
-          <NuxtLink :to="`/author/${route.params.username}/2`" class="page-link">Επόμενη &raquo;</NuxtLink>
+          <NuxtLink :to="`/authors/${route.params.username}/2`" class="page-link">Επόμενη &raquo;</NuxtLink>
         </li>
       </ul>
     </div>
