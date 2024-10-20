@@ -11908,7 +11908,7 @@ h5,
 .content table td,
 .content table th {
     border: 1px solid white;
-    padding: .7em 2em .7em 2em;
+    padding: .1em 1em .1em 1em;
 }
 
 .card-img-overlay .card-text {
@@ -12074,4 +12074,14 @@ input,
 
 .fw-900 {
     font-weight: 900;
+}
+
+.truncate-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
 }
