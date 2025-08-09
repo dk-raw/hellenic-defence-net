@@ -42,7 +42,7 @@
           <a class="page-link" href="#">{{ route.params.page }}</a>
         </li>
         <li class="page-item" v-if="posts.length == 10">
-          <NuxtLink :to="`/authors/${username.value}/${parseInt(route.params.page) + 1
+          <NuxtLink :to="`/authors/${route.params.username}/${parseInt(route.params.page) + 1
             }`" class="page-link">Επόμενη &raquo;</NuxtLink>
         </li>
       </ul>

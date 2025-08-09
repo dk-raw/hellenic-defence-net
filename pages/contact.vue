@@ -5,11 +5,9 @@
     <div class="row">
       <div class="col-md" id="col-first">
         <p class="lead fs-4 fw-normal mb-1">
-          <i class="fa-solid fa-envelope"></i> contact [at] hellenicdefence
-          [dot] net
+          <i class="fa-solid fa-envelope"></i> <a href="mailto:contact@hellenicdefence.net" target="_blank"
+            class="link">contact@hellenicdefence.net</a>
         </p>
-        <i class="text-muted">Για ευνόητους λόγους αποκρύπτουμε την πλήρη διεύθυνση. Αντικαταστήστε
-          το <b>[at]</b> με <b>@</b> και το <b>[dot]</b> με <b>.</b> (τελεία)</i>
       </div>
       <div class="col-md text-center">
         <p class="lead fs-4 fw-normal mb-1">
@@ -29,28 +27,39 @@
           class="btn btn-outline-primary w-100">@hellenicdefence</a>
       </div>
     </div>
-    <h2 class="display-6 fw-500">Για την δημοσίευση άρθρων...</h2>
-    <ul>
-      <li>
-        Στείλτε μας στην παραπάνω διεύθυνση email το κείμενο σε μορφή
-        <strong>PDF</strong>
-      </li>
-      <li>
-        Συμπεριλάβετε όλες τις φωτογραφίες σε ξεχωριστό φάκελο στα συνημμένα ή
-        μέσω
-        <a href="https://wetransfer.com" target="_blank" class="link">WeTransfer</a>
-      </li>
-      <li>Αναγράψτε το όνομά σας και το username σας στο twitter (X)</li>
-      <li>Μπορείτε να δημοσιεύσετε ανώνυμα</li>
-      <li>
-        Μπορείτε να παρουσιάσετε συνοπτικά τον εαυτό σας (σπουδές, επάγγελμα,
-        εμπειρία)
-      </li>
-      <li>Μπορείτε να παραπέμψετε σε δική σας ή τρίτη ιστοσελίδα</li>
-      <li><strong>Δεν</strong> μπορείτε να τοποθετηθείτε πολιτικά</li>
-      <li><strong>Δεν</strong> υπάρχει όριο λέξεων</li>
-      <li>Για τυχόν διορθώσεις ή αλλαγές, επικοινωνήστε μαζί μας</li>
-    </ul>
+    <div class="row">
+      <div class="col">
+        <h2 class="display-6 fw-500">Για την δημοσίευση άρθρων...</h2>
+        <ul>
+          <li>
+            Στείλτε μας στην παραπάνω διεύθυνση email το κείμενο σε μορφή
+            <strong>PDF</strong>
+          </li>
+          <li>
+            Συμπεριλάβετε όλες τις φωτογραφίες σε ξεχωριστό φάκελο στα συνημμένα ή
+            μέσω
+            <a href="https://wetransfer.com" target="_blank" class="link">WeTransfer</a>
+          </li>
+          <li>Αναγράψτε το όνομά σας και το username σας στο twitter (X)</li>
+          <li>Μπορείτε να δημοσιεύσετε ανώνυμα</li>
+          <li>
+            Μπορείτε να παρουσιάσετε συνοπτικά τον εαυτό σας (σπουδές, επάγγελμα,
+            εμπειρία)
+          </li>
+          <li>Μπορείτε να παραπέμψετε σε δική σας ή τρίτη ιστοσελίδα</li>
+          <li><strong>Δεν</strong> μπορείτε να τοποθετηθείτε πολιτικά</li>
+          <li><strong>Δεν</strong> υπάρχει όριο λέξεων</li>
+          <li>Για τυχόν διορθώσεις ή αλλαγές, επικοινωνήστε μαζί μας</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2 class="display-6 fw-500">Διαφημίστε στο σάιτ μας!</h2>
+        <p class="lead">
+          Για να διαφημίσετε στο σάιτ μας, επικοινωνήστε μαζί μας μέσω
+          email. Υπάρχει δυνατότητα να ενσωματωθούν banner διαφημίσεις αλλά και προωθημένα άρθρα.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 

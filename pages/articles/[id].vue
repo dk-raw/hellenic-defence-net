@@ -4,7 +4,7 @@
       <h1 class="display-3 fw-bold mb-1">{{ post.title }}</h1>
       <p class="lead fw-normal text-muted">
         <span v-if="post.author">Γράφει ο <NuxtLink :to="`/authors/${post.author.twitter}`" class="link">{{
-          post.author.displayName }}</NuxtLink> -
+          post.author.displayName }}</NuxtLink> στις
         </span>
         {{ date.getDate() }} {{ months[date.getMonth()] }}
         {{ date.getFullYear() }}
@@ -16,7 +16,8 @@
       <hr />
       <img :src="post.image.url" :alt="post.description" class="img-fluid mb-2" />
       <Article :content="content" />
-      <p style="font-size: 18px">Αναμένουμε τα σχόλιά σας στο Twitter!</p>
+      <p style="font-size: 18px">Αναμένουμε τα σχόλιά σας στο <a href="https://x.com/hellenicdefence" target="_blank"
+          class="link">Twitter</a>!</p>
       <hr />
       <div class="d-flex flex-row justify-content-between align-items-center">
         <p class="m-0 ff-stratum fw-bold">HDN</p>

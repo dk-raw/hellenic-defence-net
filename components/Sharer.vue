@@ -2,8 +2,8 @@
   <div class="d-flex flex-row align-items-center">
     <span style="margin-right: 0.5em">Share</span>
     <div class="btn-group" role="group">
-      <a :href="`https://twitter.com/intent/tweet?text=${title} @hellenicdefence&url=https://hellenicdefence.net/articles/${slug}`"
-        target="_blank" class="btn btn-outline-primary" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a :href="`https://x.com/intent/post?text=${title} @hellenicdefence&url=https://hellenicdefence.net/articles/${slug}`"
+        target="_blank" class="btn btn-outline-primary" title="Twitter (X)"><i class="fa-brands fa-x-twitter"></i></a>
       <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://hellenicdefence.net/articles/${slug}`"
         target="_blank" class="btn btn-outline-primary" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
       <!-- <a
